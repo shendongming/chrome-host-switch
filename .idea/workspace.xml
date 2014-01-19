@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2cb0ac01-4c13-4d1e-ba9d-3de43867ecd1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-host-switch/js/model.js" afterPath="$PROJECT_DIR$/chrome-host-switch/js/model.js" />
     </list>
     <ignored path="chrome-host-dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +29,16 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.7231183" vertical-offset="31" max-vertical-offset="660">
+            <state line="19" column="46" selection-start="246" selection-end="246" vertical-scroll-proportion="0.766129" vertical-offset="0" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="304" column="49" selection-start="6930" selection-end="6930" vertical-scroll-proportion="0.0" vertical-offset="4485" max-vertical-offset="5970">
               <folding />
             </state>
           </provider>
@@ -69,6 +78,7 @@
         <option value="$PROJECT_DIR$/pages/popup.html" />
         <option value="$PROJECT_DIR$/js/model.js" />
         <option value="$PROJECT_DIR$/js/pop.js" />
+        <option value="$PROJECT_DIR$/chrome-host-switch/js/model.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -311,9 +321,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="304" column="49" selection-start="6930" selection-end="6930" vertical-scroll-proportion="0.0" vertical-offset="4485" max-vertical-offset="5970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.7231183" vertical-offset="31" max-vertical-offset="660">
+        <state line="19" column="46" selection-start="246" selection-end="246" vertical-scroll-proportion="0.766129" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>

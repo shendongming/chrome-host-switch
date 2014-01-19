@@ -301,19 +301,27 @@
                 if(info.domain.indexOf('*')!=-1){
                     script += '}else if(shExpMatch(host,"' + info.domain + '")){';
                     script += 'return "PROXY ' + info.ip + ':80; DIRECT";';
+                }else if(info.domain.indexOf(':')!=-1){
+                    var t=info.domain.split(':');
+                    script += '}else if(shExpMatch(url,"http://' + info.domain + '/*")){';
+                    script += 'return "PROXY ' + info.ip + ':'+t[1]+'; DIRECT";';
                 }else{
                     script += '}else if(host == "' + info.domain + '"){';
                     script += 'return "PROXY ' + info.ip + ':80; DIRECT";';
                 }
 
-            }
+                script+="\n";
 
+            }
+            var data='function FindProxyForURL(url,host){ \n if(shExpMatch(url,"http:*")){if(isPlainHostName(host)){return "DIRECT";' +
+                script + '}else{return "DIRECT";}}else{return "DIRECT";}}';
+
+            console.log('pac:',data);
             chrome.proxy.settings.set({
                 value: {
                     mode: 'pac_script',
                     pacScript: {
-                        data: 'function FindProxyForURL(url,host){if(shExpMatch(url,"http:*")){if(isPlainHostName(host)){return "DIRECT";' +
-                            script + '}else{return "DIRECT";}}else{return "DIRECT";}}'
+                        data:data
                     }
                 },
                 scope: 'regular'
