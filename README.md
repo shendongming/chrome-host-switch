@@ -8,21 +8,26 @@ Host-switch
 可以先设置 ip别名
 
 比如:
+```
 127.0.0.1 web1
 127.0.0.2 web2
-
+```
 然后在设置
-
+```
 web1   www.xyz.com
 web1   *.abc.com
-
+```
 支持通配符,类似泛域名解析
 
 
 添加界面
 
 ![ScreenShot](/snap/add2.png)
+![ScreenShot](/snap/add3.png)
 
 主界面
 
 ![ScreenShot](/snap/main.png)
+
+支持模糊搜索
+![ScreenShot](/snap/search.png)
