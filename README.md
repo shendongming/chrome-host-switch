@@ -18,3 +18,10 @@ web1   *.abc.com
 
 支持通配符,类似泛域名解析
 
+
+添加界面
+
+[img]snap/add2.png[/img]
+
+主界面
+[img]snap/main.png[/img]
