@@ -51,19 +51,22 @@ www web
 
 
 全部字段搜索这2个关键词 而且 ip包含 127
-www web ip:127
+```
+    www web ip:127
+```
+
 
 搜索语法仅仅 支持 and 逻辑
 
 
 搜索 标签包含test
-
-tags:test
-
+```
+    tags:test
+```
 搜索 标签包含test 和 dev的
+```
+    tags:test tags:dev
 
-tags:test tags:dev
-
-
+```
 
 
