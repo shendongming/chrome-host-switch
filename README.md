@@ -21,7 +21,8 @@ web1   *.abc.com
 
 添加界面
 
-[img]snap/add2.png[/img]
+![ScreenShot](/snap/add2.png)
 
 主界面
-[img]snap/main.png[/img]
+
+![ScreenShot](/snap/main.png)
