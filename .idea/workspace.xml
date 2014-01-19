@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2cb0ac01-4c13-4d1e-ba9d-3de43867ecd1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-host-switch/js/model.js" afterPath="$PROJECT_DIR$/chrome-host-switch/js/model.js" />
     </list>
     <ignored path="chrome-host-dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="46" selection-start="246" selection-end="246" vertical-scroll-proportion="0.766129" vertical-offset="0" max-vertical-offset="765">
+            <state line="65" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="2.6209676" vertical-offset="0" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
@@ -330,7 +329,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="46" selection-start="246" selection-end="246" vertical-scroll-proportion="0.766129" vertical-offset="0" max-vertical-offset="765">
+        <state line="65" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="2.6209676" vertical-offset="0" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>

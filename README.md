@@ -41,5 +41,29 @@ web1   *.abc.com
 
 
 
-@todo 支持 自定义端口的 代理 域名设置
-参考 :http://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE
+搜索语法
+
+全部字段搜索关键词 www
+ www
+
+全部字段搜索这2个关键词
+www web
+
+
+全部字段搜索这2个关键词 而且 ip包含 127
+www web ip:127
+
+搜索语法仅仅 支持 and 逻辑
+
+
+搜索 标签包含test
+
+tags:test
+
+搜索 标签包含test 和 dev的
+
+tags:test tags:dev
+
+
+
+
