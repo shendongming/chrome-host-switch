@@ -31,3 +31,8 @@ web1   *.abc.com
 
 支持模糊搜索
 ![ScreenShot](/snap/search.png)
+
+
+
+@todo 支持 自定义端口的 代理 域名设置
+参考 :http://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE
