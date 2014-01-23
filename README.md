@@ -26,6 +26,11 @@ web1   *.abc.com
 ```
 支持通配符,类似泛域名解析
 
+插件地址:
+
+[url]http://shendongming.github.io/dist/chrome-host-switch.crx[/url]
+
+截图:
 
 添加界面
 
