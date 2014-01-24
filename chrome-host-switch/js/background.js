@@ -1,18 +1,19 @@
-console.log('run')
 
-
-chrome.webRequest.onCompleted.addListener(function(details) {
+chrome.webRequest.onCompleted.addListener(function (details) {
     //data[details.tabId] = details.ip;
-    console.log('details:',details,arguments)
+    console.log(details);
+    setTimeout(function(){
+
+        details.req = 'showip';
+
+        chrome.tabs.sendRequest(details.tabId, details, function (response) {
+            console.log('res:', response)
+        });
+    },1000)
+
+
 }, {
     urls: [ 'http://*/*', 'https://*/*' ],
     types: [ 'main_frame' ]
 });
 
-chrome.webRequest.onBeforeRequest.addListener(function(details) {
-    //data[details.tabId] = details.ip;
-    console.log('details:',details,arguments)
-}, {
-    urls: [ 'http://*/*', 'https://*/*' ],
-    types: [ 'main_frame' ]
-}, ["blocking"]);

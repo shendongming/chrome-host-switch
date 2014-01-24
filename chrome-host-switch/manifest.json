@@ -16,7 +16,17 @@
   //
   //"devtools_page": "devtools.html",
 
-  "browser_action": {
+    "content_scripts": [ {
+        "exclude_globs": [  ],
+        "include_globs": [ "*" ],
+        "js": [ "/js/script.js" ],
+        "matches": [ "http://*/*", "https://*/*" ],
+        "run_at": "document_start",
+        //"run_at":"document_before"
+        "all_frames": false
+    } ],
+
+    "browser_action": {
     "default_icon": "icons/icon_16.png",
     "default_title": "Host Switch",      // optional; shown in tooltip
     "default_popup": "pages/popup.html"        // optional
