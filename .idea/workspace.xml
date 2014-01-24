@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cb0ac01-4c13-4d1e-ba9d-3de43867ecd1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chrome-host-switch/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-host-switch/js/background.js" afterPath="$PROJECT_DIR$/chrome-host-switch/js/background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-host-switch/manifest.json" afterPath="$PROJECT_DIR$/chrome-host-switch/manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chrome-host-dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +28,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="0" selection-start="564" selection-end="564" vertical-scroll-proportion="0.23387097" vertical-offset="753" max-vertical-offset="1170">
+            <state line="61" column="0" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0" vertical-offset="791" max-vertical-offset="1245">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/background.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="8" selection-start="331" selection-end="331" vertical-scroll-proportion="0.44354838" vertical-offset="0" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -37,7 +49,36 @@
       <file leaf-file-name="model.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="304" column="49" selection-start="6930" selection-end="6930" vertical-scroll-proportion="0.0" vertical-offset="4485" max-vertical-offset="5970">
+            <state line="369" column="12" selection-start="8824" selection-end="8824" vertical-scroll-proportion="0.0" vertical-offset="5409" max-vertical-offset="5970">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pop.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/pop.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="229" column="66" selection-start="6582" selection-end="6622" vertical-scroll-proportion="-2.1153846" vertical-offset="3380" max-vertical-offset="4695">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="53" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0" vertical-offset="423" max-vertical-offset="795">
+              <folding>
+                <element signature="e#0#37#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manifest.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome-host-switch/manifest.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="33" selection-start="446" selection-end="446" vertical-scroll-proportion="-6.25" vertical-offset="150" max-vertical-offset="840">
               <folding />
             </state>
           </provider>
@@ -66,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/js/background.js" />
         <option value="$PROJECT_DIR$/pages/hi.html" />
         <option value="$PROJECT_DIR$/pac.js" />
@@ -79,6 +119,10 @@
         <option value="$PROJECT_DIR$/js/pop.js" />
         <option value="$PROJECT_DIR$/chrome-host-switch/js/model.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/chrome-host-switch/js/context.js" />
+        <option value="$PROJECT_DIR$/chrome-host-switch/manifest.json" />
+        <option value="$PROJECT_DIR$/chrome-host-switch/js/script.js" />
+        <option value="$PROJECT_DIR$/chrome-host-switch/js/background.js" />
       </list>
     </option>
   </component>
@@ -320,16 +364,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/model.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="49" selection-start="6930" selection-end="6930" vertical-scroll-proportion="0.0" vertical-offset="4485" max-vertical-offset="5970">
+        <state line="61" column="0" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0" vertical-offset="791" max-vertical-offset="1245">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/chrome-host-switch/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="564" selection-end="564" vertical-scroll-proportion="0.23387097" vertical-offset="753" max-vertical-offset="1170">
+        <state line="20" column="33" selection-start="446" selection-end="446" vertical-scroll-proportion="-6.25" vertical-offset="150" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="53" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0" vertical-offset="423" max-vertical-offset="795">
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/pop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="229" column="66" selection-start="6582" selection-end="6622" vertical-scroll-proportion="-2.1153846" vertical-offset="3380" max-vertical-offset="4695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="369" column="12" selection-start="8824" selection-end="8824" vertical-scroll-proportion="0.0" vertical-offset="5409" max-vertical-offset="5970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-host-switch/js/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="8" selection-start="331" selection-end="331" vertical-scroll-proportion="0.44354838" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
