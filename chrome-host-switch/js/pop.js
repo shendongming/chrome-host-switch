@@ -143,7 +143,8 @@ $(function () {
                 }
                 //<a href="#" data-toggle="tooltip" title="" data-original-title="Default tooltip">you probably</a>
 
-                tbody.append('<tr  title="备注:' + v.note + ' 更新时间:' + v.uptime + '"   id="host-' + v.id + '" data-id="' + v.id + '"><td><input name="id[]" value="' + v.id + '" type="checkbox"></td><td><span class="host-status glyphicon glyphicon-ok ' + status + '"  ></span></td></td><td>' + v.ip + '</td><td>' + v.domain + '</td>' + tags + '</tr>');
+                //@todo 激活点击图标就ok了
+                tbody.append('<tr  title="备注:' + v.note + ' 更新时间:' + v.uptime + '"   id="host-' + v.id + '" data-id="' + v.id + '"><td><input name="id[]" value="' + v.id + '" type="checkbox"></td><td><span data-status="'+ v.status+'"  data-id="' + v.id + '"  class="host-status glyphicon glyphicon-ok ' + status + '"  ></span></td></td><td>' + v.ip + '</td><td>' + v.domain + '</td>' + tags + '</tr>');
 
 
             })
@@ -227,6 +228,7 @@ $(function () {
                 'domain': $('#domain').val(),
                 'note': $('#note').val(),
                 'tags': [],
+                'status':1,
                 'uptime': new Date().Format("yyyy-MM-dd hh:mm:ss")
             };
             var add_tags = $('#add_labels').val().split(',');
@@ -268,6 +270,17 @@ $(function () {
         //window.open('/pages/hi.html','_blank','width=100,height=100,top=100,left=100');
     })
 
+    function set_status(id,status){
+
+        var ids=[id];
+        if(status==1){
+            render_status(ids, 1);
+            model.enableHosts(ids);
+        }else{
+            render_status(ids, 0);
+            model.disableHosts(ids);
+        }
+    }
     $('#but_enabled').click(function () {
         var ids = []
         $('input[type=checkbox][name="id[]"]:checked').each(function () {

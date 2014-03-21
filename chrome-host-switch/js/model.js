@@ -24,6 +24,25 @@
     //字段提示的domain
     var domains=[];
 
+    function uniq_arr(arr,key){
+        console.log('arr',arr);
+        var dic={}
+        for(var i=0;i<arr.length;i++){
+            var t=arr[i];
+            dic[t[key]]=t;
+        }
+        var j=0;
+        arr.length=0;
+        for(var k in dic){
+            if(dic.hasOwnProperty(k)){
+
+                arr.push(dic[k]);
+                j++;
+            }
+        }
+        console.log('arr2:',arr);
+        return arr;
+    }
 
     function loadsIp(){
         var hosts= loadData('hosts');
@@ -32,6 +51,9 @@
             ips.push({ip: hosts[i].ip });
             domains.push({domain:hosts[i].domain});
         }
+
+        uniq_arr(ips,'ip');
+        uniq_arr(domains,'domain');
 
         if(last_callback_ip){
             last_callback_ip(ips);
@@ -108,8 +130,12 @@
         hosts[id] = info;
 
         saveData('hosts', hosts);
+
         //修改之后 更新
         loadsIp()
+        //自动启动
+        model.enableHosts([id])
+        model.reload();
 
     }
 
@@ -255,6 +281,7 @@
                     host_alisa[v.domain]= v.ip;
                     result_map[v.domain]= v.ip;
                 }
+                console.log('find:',i,v)
 
             }
         })
@@ -270,6 +297,9 @@
                 }else if( is_ip.test(v.ip)){
                     result_map[v.domain]= v.ip;
                 }
+                else{
+                    console.log('err:',i,v)
+                }
 
             }
         })
@@ -284,6 +314,12 @@
         return results;
 
     }
+
+    //重新加载
+    model.reload=function(){
+        model.setStatus(loadData('status'));
+    }
+
     //开关,启用暂停
     model.setStatus = function (checked) {
         saveData('status',checked);
@@ -325,7 +361,9 @@
                     }
                 },
                 scope: 'regular'
-            }, $.noop);
+            }, function(){
+                console.log('set pac scripts result:',arguments);
+            });
             $('#msg').html('set :' + script);
         } else {
             chrome.proxy.settings.set({
@@ -343,6 +381,7 @@
         var hosts = loadData('hosts');
         delete hosts[id];
         saveData('hosts', hosts);
+        model.reload();
     }
 
     model.enableHosts = function (ids) {
@@ -355,6 +394,7 @@
         }
 
         saveData('hosts', hosts);
+        model.reload();
     }
     model.disableHosts = function (ids) {
         var hosts = loadData('hosts');
@@ -365,6 +405,7 @@
         }
 
         saveData('hosts', hosts);
+        model.reload();
     }
 
     model.updateHost = function (id) {
