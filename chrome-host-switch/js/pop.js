@@ -144,7 +144,7 @@ $(function () {
                 //<a href="#" data-toggle="tooltip" title="" data-original-title="Default tooltip">you probably</a>
 
                 //@todo 激活点击图标就ok了
-                tbody.append('<tr  title="备注:' + v.note + ' 更新时间:' + v.uptime + '"   id="host-' + v.id + '" data-id="' + v.id + '"><td><input name="id[]" value="' + v.id + '" type="checkbox"></td><td><span data-status="'+ v.status+'"  data-id="' + v.id + '"  class="host-status glyphicon glyphicon-ok ' + status + '"  ></span></td></td><td>' + v.ip + '</td><td>' + v.domain + '</td>' + tags + '</tr>');
+                tbody.append('<tr  title="备注:' + v.note + ' 更新时间:' + v.uptime + '"   id="host-' + v.id + '" data-id="' + v.id + '"><td><input name="id[]" value="' + v.id + '" type="checkbox"></td><td><a  class="a-host-status" href="#"><span data-status="'+ v.status+'"  data-id="' + v.id + '"  class="host-status glyphicon glyphicon-ok ' + status + '"  ></span></a></td></td><td>' + v.ip + '</td><td>' + v.domain + '</td>' + tags + '</tr>');
 
 
             })
@@ -215,7 +215,7 @@ $(function () {
         setTimeout(function () {
             c.prop('checked', !c.prop('checked')).change();
         })
-        return false;
+        //return false;
 
     });
     $('#but-save').click(function () {
@@ -281,6 +281,24 @@ $(function () {
             model.disableHosts(ids);
         }
     }
+    $('#tbody-hosts').on('click','a.a-host-status',function(){
+        var status_obj = $(this).find('.host-status');
+        var status = status_obj.data('status');
+        var id = status_obj.data('id');
+        var ids=[id];
+        if(status=='1'){
+            status_obj.data('status',0);
+            console.log('disabeld',ids);
+            render_status(ids, 0);
+            model.disableHosts(ids);
+        }else{
+            render_status(ids, 1);
+            status_obj.data('status',1);
+            model.enableHosts(ids);
+            console.log('enableHosts',ids);
+        }
+        return false;
+    })
     $('#but_enabled').click(function () {
         var ids = []
         $('input[type=checkbox][name="id[]"]:checked').each(function () {
@@ -312,5 +330,8 @@ $(function () {
 
 
     $('#add_tab a:first').tab('show')
+
+
+
 })
 

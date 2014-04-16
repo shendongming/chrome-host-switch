@@ -2,31 +2,21 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <!-- 最新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="/libs/bootstrap3/css/bootstrap.min.css">
-
-    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
     <link rel="stylesheet" href="/libs/bootstrap3/css/bootstrap-theme.min.css">
-
     <link rel="stylesheet" href="/libs/jquery.switchButton.css">
-
-
-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="/libs/jquery.min.js"></script>
-
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/libs/bootstrap3/js/bootstrap.min.js"></script>
     <script src="/libs/bootstrap3/js/bootstrap-typeahead.js"></script>
-
     <script src="/libs/jquery-ui.min.js"></script>
-
     <script src="/libs/jquery.switchButton.js"></script>
     <script src="/js/model.js"></script>
     <script src="/js/pop.js"></script>
     <style>
-        .typeahead{
+        .typeahead {
             z-index: 1999;
         }
+
         #quick-add::-webkit-input-placeholder {
             color: transparent;
         }
@@ -36,22 +26,24 @@
             content: "#这是注释,支持一次添加多个域名为一组\A #@prod 线上环境,下列配置都是使用下列标签 \A 192.168.1.1 www.google.com www2.google.com \A #这个支持泛域名匹配模式\A 192.168.1.1 *.xyz.com \A \A #添加别名: 别名修改其他的ip自动同时修改 \A 192.168.1.3 web1 \A 192.168.1.4 web2 \A 192.168.1.5 web3";
         }
 
-        .status-enabled{
-         color: green;
+        .status-enabled {
+            color: green;
         }
-        .status-disabled{
-            color:#cccccc;
+
+        .status-disabled {
+            color: #cccccc;
         }
 
     </style>
 </head>
 <body style=" ">
 
-<div style=" width: 600px;height:600px;-webkit-border-radius:3px;border: 1px solid #0088CC;">
+<div style=" width: 600px;height:600px;-webkit-border-radius:3px;border: 1px solid #0088CC;position: relative">
 
-<div class="input-group"  >
+    <div class="input-group">
 
-        <input id="input_search" class="form-control input-sm" placeholder="搜索:域名,ip,标签. 比如:web1或者web2 ip:192.或者tags:dev " value="">
+        <input id="input_search" class="form-control input-sm"
+               placeholder="搜索:域名,ip,标签. 比如:web1或者web2 ip:192.或者tags:dev " value="">
 
         <span class="input-group-btn">
             <button type="button" class="btn btn-default dropdown-toggle  btn-sm" data-toggle="dropdown">
@@ -73,63 +65,70 @@
         <span class="input-group-btn" style="width: 100px">
             <input id="status" type="checkbox" value="1" checked>
         </span>
-    <span class="input-group-btn"  >
+    <span class="input-group-btn">
 
     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#dlg_add">添加
     </button>
         </span>
-</div>
+    </div>
 
-<div >
-    标签:
+    <div>
+        标签:
     <span id="label-filter">
-        <a href="#" class="active">全部(12)</a>
+        <a href="#" class="active">全部(0)</a>
 
     <a href="#">
-        <span class="label label-default">开发(12)</span>
+        <span class="label label-default">开发(0)</span>
     </a>
     <a href="#">
-        <span class="label label-default">开发(12)</span>
+        <span class="label label-default">开发(0)</span>
     </a>
     </span>
 
-</div>
-<script type="tpl/hanldbars">
+    </div>
+    <script type="tpl/hanldbars">
 
         <div>
         </div>
 
 
-</script>
+
+    </script>
 
 
-<div style="height: 480px;overflow: auto">
+    <div style="height: 480px;overflow: auto">
 
 
-    <table id="main-table" class="table table-hover  table-condensed">
-        <thead>
+        <table id="main-table" class="table table-hover  table-condensed">
+            <thead>
 
-        <tr>
-            <th width="20"><input id="select_all" type="checkbox"></th>
-            <th width="20">&nbsp;</th>
-            <th width="110">Ip</th>
-            <th>domain</th>
-            <th>标签</th>
-        </tr>
-        </thead>
-        <tbody id="tbody-hosts">
+            <tr>
+                <th width="20"><input id="select_all" type="checkbox"></th>
+                <th width="20">&nbsp;</th>
+                <th width="110">Ip</th>
+                <th>domain</th>
+                <th>标签</th>
+            </tr>
+            </thead>
+            <tbody id="tbody-hosts">
 
-        </tbody>
+            </tbody>
 
 
-    </table>
+        </table>
 
-    <button id="but_del">remove</button>
-    <button id="but_enabled">enabled</button>
-    <button id="but_disabled">disabled</button>
+        <button id="but_del">remove</button>
+        <button id="but_enabled">enabled</button>
+        <button id="but_disabled">disabled</button>
 
+    </div>
+
+
+    <span>
+        <a target="_blank" class="btn" style="position: absolute;right: 0;bottom: 2px;"
+           href="https://github.com/shendongming/chrome-host-switch">Fork</a>
+    </span>
 </div>
-
 <!-- Modal -->
 <div class="modal fade" id="dlg_add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -138,7 +137,7 @@
             <div class="modal-body">
                 <ul id="add_tab" class="nav nav-tabs">
                     <li><a href="#add" data-toggle="tab">添加</a></li>
-                    <li><a href="#add2" data-toggle="tab">批量添加</a></li>
+                    <!--<li ><a href="#add2" data-toggle="tab">批量添加</a></li>-->
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="add">
@@ -148,7 +147,8 @@
                                 <label for="ip" class="col-xs-2 control-label">ip</label>
 
                                 <div class="col-xs-8">
-                                    <input autocomplete="off" placeholder="请输入ip或者别名,比如:127.0.0.1或者web1" id="ip" list="ip-list"
+                                    <input autocomplete="off" placeholder="请输入ip或者别名,比如:127.0.0.1或者web1" id="ip"
+                                           list="ip-list"
                                            class="form-control">
 
                                 </div>
@@ -176,6 +176,7 @@
 
                             <div class="form-group">
                                 <label class="col-xs-2  control-label">标签</label>
+
                                 <div class="col-xs-8" id="div_labels">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" name="labels[]" value="prod">prod
@@ -195,8 +196,10 @@
 
                             <div class="form-group">
                                 <label class="col-xs-2  control-label">自定义标签</label>
+
                                 <div class="col-xs-8">
-                                    <input type="text" id="add_labels" placeholder="自定义标签,分割,比如:test1,test-sdm,test-2" class="form-control">
+                                    <input type="text" id="add_labels" placeholder="自定义标签,分割,比如:test1,test-sdm,test-2"
+                                           class="form-control">
                                 </div>
                             </div>
 
@@ -205,7 +208,8 @@
                     <div class="tab-pane active" id="add2">
                         输入ip列表
 
-                        <textarea id="quick-add" disabled   placeholder="." class="form-control" style="height:200px"></textarea>
+                        <textarea id="quick-add" disabled placeholder="." class="form-control"
+                                  style="height:200px"></textarea>
                         开发中...
                     </div>
                 </div>

@@ -25,7 +25,7 @@
     var domains=[];
 
     function uniq_arr(arr,key){
-        console.log('arr',arr);
+
         var dic={}
         for(var i=0;i<arr.length;i++){
             var t=arr[i];
@@ -40,7 +40,7 @@
                 j++;
             }
         }
-        console.log('arr2:',arr);
+
         return arr;
     }
 
@@ -281,7 +281,7 @@
                     host_alisa[v.domain]= v.ip;
                     result_map[v.domain]= v.ip;
                 }
-                console.log('find:',i,v)
+
 
             }
         })
@@ -352,7 +352,7 @@
             var data='function FindProxyForURL(url,host){ \n if(shExpMatch(url,"http:*")){if(isPlainHostName(host)){return "DIRECT";' +
                 script + '}else{return "DIRECT";}}else{return "DIRECT";}}';
 
-            console.log('pac:',data);
+
             chrome.proxy.settings.set({
                 value: {
                     mode: 'pac_script',
@@ -362,13 +362,14 @@
                 },
                 scope: 'regular'
             }, function(){
-                console.log('set pac scripts result:',arguments);
+                //console.log('set pac scripts result:',arguments);
             });
             $('#msg').html('set :' + script);
         } else {
             chrome.proxy.settings.set({
                 value: {
-                    mode: 'system'
+                    //mode: 'system'
+                    mode: 'direct'
                 },
                 scope: 'regular'
             }, $.noop);
