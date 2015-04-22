@@ -144,8 +144,11 @@ $(function () {
                 //<a href="#" data-toggle="tooltip" title="" data-original-title="Default tooltip">you probably</a>
 
                 //@todo 激活点击图标就ok了
-                tbody.append('<tr  title="备注:' + v.note + ' 更新时间:' + v.uptime + '"   id="host-' + v.id + '" data-id="' + v.id + '"><td><input name="id[]" value="' + v.id + '" type="checkbox"></td><td><a  class="a-host-status" href="#"><span data-status="'+ v.status+'"  data-id="' + v.id + '"  class="host-status glyphicon glyphicon-ok ' + status + '"  ></span></a></td></td><td>' + v.ip + '</td><td>' + v.domain + '</td>' + tags + '</tr>');
-
+                tbody.append('<tr  title="备注:' + v.note + ' 更新时间:' + v.uptime + '"   id="host-' + v.id + '" data-id="' +
+                v.id + '"><td><input name="id[]" value="' + v.id + '" type="checkbox"></td><td><a  class="a-host-status" href="#"><span data-status="'
+                + v.status+'"  data-id="' + v.id + '"  class="host-status glyphicon glyphicon-ok ' + status + '"  ></span></a></td></td><td>' + v.ip
+                + '</td><td>' + v.domain + '</td>' + tags + '</tr>');
+i
 
             })
         }
@@ -251,9 +254,37 @@ $(function () {
 
         } else {
             console.log('批量添加模式');
+            var host;
+            var lines = $('#quick-add').val().split(/\n+/);
+            var infos = {
+                'ip': '',
+                'domain': '',
+                'note': $('#quick-add-note').val(),
+                'tags': [],
+                'status':1,
+                'uptime': new Date().Format("yyyy-MM-dd hh:mm:ss")
+            };
+            var quick_add_tags = $('#quick-add-labels').val().split(',');
+            $(quick_add_tags).each(function (i, v) {
+                if (v) {
+                    infos.tags.push(v);
+                }
+            });
+            $('#quick_div_labels input[name="labels[]"]:checked').each(function () {
+                infos.tags.push(this.value);
+            });
+            for(var i = 0 ; i < lines.length ; i++ ){
+                host = lines[i].split(/\s+/);
+                infos.ip = host[0];
+                infos.domain = host[1];
+                model.addHost(infos);
+                $('#dlg_add').modal('hide');
+                $('#quick-add').val('');
+                setTimeout(search, 0);
+            }
         }
 
-    })
+    });
     $('#input_search').change(function () {
         clearTimeout($(this).data('t'));
         $(this).data('t', setTimeout(search, 100));

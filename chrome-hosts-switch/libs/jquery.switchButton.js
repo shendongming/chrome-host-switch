@@ -46,11 +46,11 @@
 
             show_labels: true,			// Should we show the on and off labels?
             labels_placement: "both", 	// Position of the labels: "both", "left" or "right"
-            on_label: "ON",				// Text to be displayed when checked
-            off_label: "OFF",			// Text to be displayed when unchecked
+            on_label: "",				// Text to be displayed when checked
+            off_label: "",			// Text to be displayed when unchecked
 
-            width: 25,					// Width of the button in pixels
-            height: 11,					// Height of the button in pixels
+            width: 45,					// Width of the button in pixels
+            height: 25,					// Height of the button in pixels
             button_width: 12,			// Width of the sliding part in pixels
 
             clear: true,				// Should we insert a div with style="clear: both;" after the switch button?
