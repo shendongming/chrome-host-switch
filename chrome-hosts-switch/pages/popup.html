@@ -49,7 +49,6 @@
             <input id="status" type="checkbox" value="1" checked>
         </span>
     </div>
-
     <div class="tag">
         标签:
         <span id="label-filter">
@@ -63,43 +62,26 @@
         </a>
         </span>
     </div>
+    <div class="table-header">
+        <input id="select_all" type="checkbox">
+        <span>IP</span>
+        <span>DOMAIN</span>
+        <span>标签</span>
+    </div>
     <script type="tpl/hanldbars">
-
         <div>
         </div>
-
     </script>
-
-
-    <div style="height: 480px;overflow: auto">
-
-
+    <div style="height: 440px;overflow: auto">
         <table id="main-table" class="table table-hover  table-condensed">
-            <thead>
-
-            <tr >
-                <th width="20"><input id="select_all" type="checkbox"></th>
-                <th width="20">&nbsp;</th>
-                <th width="110">Ip</th>
-                <th>domain</th>
-                <th>标签</th>
-            </tr>
-            </thead>
             <tbody id="tbody-hosts">
-
             </tbody>
-
-
         </table>
-
+    </div>
+    <span>
         <button id="but_del">remove</button>
         <button id="but_enabled">enabled</button>
         <button id="but_disabled">disabled</button>
-
-    </div>
-
-
-    <span>
         <a target="_blank" class="btn" style="position: absolute;right: 0;bottom: 2px;"
            href="http://ice.gs">Change By GGICE</a>
     </span>
@@ -116,21 +98,15 @@
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="add">
-
                         <form role="form" class="form-horizontal">
                             <div class="form-group">
                                 <label for="ip" class="col-xs-2 control-label">ip</label>
-
                                 <div class="col-xs-8">
                                     <input autocomplete="off" placeholder="请输入ip或者别名,比如:127.0.0.1或者web1" id="ip"
                                            list="ip-list"
                                            class="form-control">
-
                                 </div>
-
-
                             </div>
-
                             <div class="form-group">
                                 <label for="domain" class="col-xs-2  control-label">域名</label>
 
@@ -162,13 +138,8 @@
                                     <label class="checkbox-inline">
                                         <input type="checkbox" name="labels[]" value="test">test
                                     </label>
-
-
                                 </div>
-
-
                             </div>
-
                             <div class="form-group">
                                 <label class="col-xs-2  control-label">自定义标签</label>
 
@@ -177,7 +148,6 @@
                                            class="form-control">
                                 </div>
                             </div>
-
                         </form>
                     </div>
                     <div class="tab-pane active quick-add" id="add2">
@@ -186,13 +156,10 @@
                         <div class="quick-add-form">
                             <div class="form-group">
                                 <label for="quick-add-note" class="col-xs-2  control-label">备注</label>
-
                                 <div class="col-xs-8">
                                     <input placeholder="附加描述,可选" id="quick-add-note" list="ip-list" class="form-control">
                                 </div>
-
                             </div>
-
                             <div class="form-group">
                                 <label class="col-xs-2  control-label">标签</label>
 
@@ -206,16 +173,10 @@
                                     <label class="checkbox-inline">
                                         <input type="checkbox" name="labels[]" value="test">test
                                     </label>
-
-
                                 </div>
-
-
                             </div>
-
                             <div class="form-group">
                                 <label class="col-xs-2  control-label">自定义标签</label>
-
                                 <div class="col-xs-8">
                                     <input type="text" id="quick-add-labels" placeholder="自定义标签,分割,比如:test1,test-sdm,test-2"
                                            class="form-control">
@@ -235,7 +196,5 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-
-
 </body>
 </html>

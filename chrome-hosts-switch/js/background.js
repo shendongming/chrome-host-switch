@@ -1,4 +1,3 @@
-
 chrome.webRequest.onCompleted.addListener(function (details) {
     //data[details.tabId] = details.ip;
     console.log(details);

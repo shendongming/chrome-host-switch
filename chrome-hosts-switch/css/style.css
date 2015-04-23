@@ -47,3 +47,17 @@
 .quick-add .form-group{
     height: 30px;
 }
+.table-header{
+    padding-left: 5px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.table-header span{
+    display: inline-block;
+    width: 168px;
+    text-align: center;
+    color: #0088CC;
+}
+.table-header span:last-child{
+    text-align: right;
+    margin-left: -20px;
+}
